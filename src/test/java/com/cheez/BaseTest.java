@@ -23,11 +23,12 @@ import java.util.List;
 import javax.ws.rs.core.UriBuilder;
 
 public abstract class BaseTest {
+  private static final int SERVER_PORT = TestUtils.pickUnusedPort();
   protected static final URI BASE_URI = getBaseURI();
   private HttpServer server;
 
   private static URI getBaseURI() {
-    return UriBuilder.fromUri("http://localhost/").port(12306).build();
+    return UriBuilder.fromUri("http://localhost/").port(SERVER_PORT).build();
   }
 
   @Before
