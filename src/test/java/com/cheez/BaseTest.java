@@ -8,6 +8,7 @@ import com.google.inject.Module;
 import com.google.inject.servlet.ServletModule;
 
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;
+import com.sun.jersey.api.core.DefaultResourceConfig;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
 import com.sun.jersey.core.spi.component.ioc.IoCComponentProviderFactory;
@@ -34,7 +35,7 @@ public abstract class BaseTest {
   @Before
   public void startServer() throws Exception {
     Injector injector = Guice.createInjector(getModules());
-    ResourceConfig rc = new PackagesResourceConfig("com.cheez.service");
+    ResourceConfig rc = new DefaultResourceConfig();
     IoCComponentProviderFactory ioc = new GuiceComponentProviderFactory(rc, injector);
     server = GrizzlyServerFactory.createHttpServer(BASE_URI, rc, ioc);
   }

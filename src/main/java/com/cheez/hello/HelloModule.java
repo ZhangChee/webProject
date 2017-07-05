@@ -1,16 +1,16 @@
 // Copyright 2017, Luminate Wireless
 // All rights reserved.
-package com.cheez.hello.modules;
+package com.cheez.hello;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 
-import com.cheez.hello.dao.Hello;
-
 public class HelloModule extends AbstractModule {
   @Override
-  protected void configure() {}
+  protected void configure() {
+    bind(HelloService.class);
+  }
 
   @Provides
   @Singleton

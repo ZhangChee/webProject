@@ -1,8 +1,6 @@
 // Copyright 2017, Luminate Wireless
 // All rights reserved.
-package com.cheez.service;
-
-import com.cheez.hello.dao.Hello;
+package com.cheez.hello;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

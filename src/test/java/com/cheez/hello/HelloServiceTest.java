@@ -1,11 +1,11 @@
 // Copyright 2017, Luminate Wireless
 // All rights reserved.
-package com.cheez.service;
+package com.cheez.hello;
 
 import com.google.inject.Module;
 
 import com.cheez.BaseTest;
-import com.cheez.hello.modules.HelloModule;
+import com.cheez.hello.HelloModule;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
